@@ -3,15 +3,22 @@ import { Component } from '@angular/core';
 @Component({
     selector:'sandbox',
     template:`
-        <h1>Hello world!</h1>
-        <button id="btn" (mousedown)="fireEvent($event,'Hello')">Click me!</button>
+        <h1>Changing properties with Events</h1>
+        <button (click)="changeValue()">Change Value!</button>
+        <div *ngIf="value">
+            <h1>{{ text }}</h1>
+        </div>
     `
 })
 
 export class SandboxComponent{
-    fireEvent(e, greeting){
-        //console.log('Button Clicked!');
-        //console.log(greeting);
-        console.log(e.target.id);
+    
+    text:string = 'Hello!';
+    value:boolean = true;
+    
+    changeValue(){
+        //this.value = false;
+        this.value = !this.value;
+        //The above just toggles it :)
     }
 }
