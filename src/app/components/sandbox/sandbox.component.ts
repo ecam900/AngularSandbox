@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
         <p> My birthday is {{ birthday | date:"MM-dd-yyyy" }}</p>
         <hr/>
         <p> My birthday year is is {{ birthday | date:"yyyy" }}</p>
+        <hr/>
+        <p>Your total is {{ total | currency:"USD":"1" }}</p>
     `
 
     /* Pipes are like filters. They make things look way better. They can also take parameters; example above */
@@ -14,4 +16,5 @@ import { Component } from '@angular/core';
 
 export class SandboxComponent{
     birthday = new Date(1990, 10, 4);
+    total = 500;
 }
