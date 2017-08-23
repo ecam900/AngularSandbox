@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
     selector:'sandbox',
     template:`
          <h1>Checking out keyboard events:</h1>
-         <input type="text" (keyup)="fireEvent($event)">
+         <input type="text" (keyup)="fireEvent($event)" placeholder="keyup event">
+         <input type="text" (keydown)="fireEvent($event)" placeholder="keydown event">
     `
 })
 
