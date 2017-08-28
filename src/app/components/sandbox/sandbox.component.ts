@@ -23,7 +23,9 @@ export class SandboxComponent{
     users:string[] = ['Eric', 'Ana', 'Pepe'];
     
     onSubmit(){
-        this.users.push(this.name);
+        if(this.name !="" ){
+            this.users.push(this.name);
+        }
         this.name = '';
     }
 }
